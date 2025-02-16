@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Bonificação</title>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Bonificação</h1>
+        <form id="uploadForm">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                <input type="checkbox" id="salarioBase" checked>
+                <label for="salarioBase">Incluir Salário Base (R$ 1.350,00)</label>
+            </div>
+            <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" required>
+            <button type="submit">Calcular Bonificação</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
