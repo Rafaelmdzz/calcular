@@ -21,7 +21,11 @@
             flex: 1;
             padding: 15px;
             max-width: 250px;
-            height: fit-content;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            display: flex;
+            flex-direction: column;
         }
 
         .pesquisa {
@@ -135,12 +139,13 @@
         }
 
         #result-subprocesso {
-            max-height: 400px;
+            flex: 1;
             overflow-y: auto;
             margin-top: 10px;
             background-color: white;
             border-radius: 4px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: calc(100vh - 150px);
         }
 
         .sem-resultado {
