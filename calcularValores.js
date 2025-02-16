@@ -2,7 +2,7 @@ import subprocessValues from "./subprocessos.js";
 
 document.getElementById('uploadForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    const resultElement = document.getElementById('result');
+    const resultElement = document.getElementById('result-atendimento');
     const file = document.getElementById('fileInput').files[0];
 
     try {
@@ -31,7 +31,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
                                 const subprocess = String(cell).trim().toUpperCase();
                                 if (subprocessValues.hasOwnProperty(subprocess)) {
                                     subprocessCount[subprocess] = (subprocessCount[subprocess] || 0) + 1;
-                                    total += subprocessValues[subprocess];
+                                    total += subprocessValues[subprocess].valor;
                                 }
                             }
                         });
@@ -39,7 +39,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
                 });
 
                 let encontrados = Object.entries(subprocessCount).map(([subprocess, count]) => {
-                    const valor = subprocessValues[subprocess];
+                    const valor = subprocessValues[subprocess].valor;
                     const valorTotal = valor * count;
                     return `${subprocess}: ${count}x (R$ ${valor.toFixed(2)} cada = R$ ${valorTotal.toFixed(2)})`;
                 });

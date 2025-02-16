@@ -9,18 +9,31 @@
 </head>
 <body>
     <div class="container">
-        <h1>Calculadora de Bonificação</h1>
+        <h2>Calculadora de Bonificação</h2>
         <form id="uploadForm">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+            <div >
                 <input type="checkbox" id="salarioBase" checked>
                 <label for="salarioBase">Incluir Salário Base (R$ 1.350,00)</label>
             </div>
             <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" required>
             <button type="submit">Calcular Bonificação</button>
         </form>
-        <div id="result"></div>
+        <div id="result-atendimento" class="result"></div>
+    </div>
+        
+    <div class="pesquisa-subproces">
+        <section>
+            <h1>Subprocessos</h1>
+        </section>
+        <section class="pesquisa">
+            <input type="text" placeholder="pesquisar subprocesso" class="pesquisa-subprocesso">
+            <button type="submit" class="botao-pesquisar">buscar</button>
+            <div id="result-subprocesso"></div>
+        </section>
     </div>
 
+    <script src="subprocessos.js"></script>
+    <script src="procurarSubprocesso.js"></script>
     <script src="calcularValores.js"></script>
 </body>
 </html>
