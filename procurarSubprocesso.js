@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const resultados = Object.entries(subprocessValues)
             .filter(([nome]) => nome.includes(termoPesquisa))
-            .map(([nome, dados]) => ({nome, ...dados}));
+            .map(([nome, dados]) => ({nome, ...dados}))
+            .sort((a, b) => a.nome.localeCompare(b.nome));
 
         console.log('Resultados encontrados:', resultados);
 

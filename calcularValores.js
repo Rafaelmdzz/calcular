@@ -1,9 +1,13 @@
-import subprocessValues from "./subprocessos.js";
-
 document.getElementById('uploadForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const resultElement = document.getElementById('result-atendimento');
     const file = document.getElementById('fileInput').files[0];
+
+    if (!file) {
+        resultElement.textContent = 'Por favor, selecione um arquivo.';
+        resultElement.className = 'error';
+        return;
+    }
 
     try {
         const reader = new FileReader();
@@ -28,21 +32,31 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
                     if (Array.isArray(row)) {
                         row.forEach(cell => {
                             if (cell) {
-                                const subprocess = String(cell).trim().toUpperCase();
+                                // Normaliza o texto removendo espaços extras e convertendo para maiúsculas
+                                const subprocess = String(cell).trim().toUpperCase()
+                                    .replace(/\s+/g, ' ') // Remove espaços extras entre palavras
+                                    .replace(/^\s+|\s+$/g, ''); // Remove espaços no início e fim
+
+                                // Verifica se o subprocesso existe no objeto subprocessValues
                                 if (subprocessValues.hasOwnProperty(subprocess)) {
                                     subprocessCount[subprocess] = (subprocessCount[subprocess] || 0) + 1;
                                     total += subprocessValues[subprocess].valor;
+                                } else {
+                                    console.log('Subprocesso não encontrado:', subprocess);
                                 }
                             }
                         });
                     }
                 });
 
-                let encontrados = Object.entries(subprocessCount).map(([subprocess, count]) => {
-                    const valor = subprocessValues[subprocess].valor;
-                    const valorTotal = valor * count;
-                    return `${subprocess}: ${count}x (R$ ${valor.toFixed(2)} cada = R$ ${valorTotal.toFixed(2)})`;
-                });
+                // Ordena os subprocessos em ordem alfabética
+                let encontrados = Object.entries(subprocessCount)
+                    .sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
+                    .map(([subprocess, count]) => {
+                        const valor = subprocessValues[subprocess].valor;
+                        const valorTotal = valor * count;
+                        return `${subprocess}: ${count}x (R$ ${valor.toFixed(2)} cada = R$ ${valorTotal.toFixed(2)})`;
+                    });
 
                 resultElement.innerHTML = `
                     <div class="success">
