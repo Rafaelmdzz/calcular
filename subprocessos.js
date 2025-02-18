@@ -16,7 +16,7 @@ const subprocessValues = {
         descricao: "USADO PARA PROCESSO DE ATIVAÇÃO SOLICITADA POR TECNICO"
     },
     "ATUALIZAR CADASTRO": {
-        valor: 1.00,
+        valor: 0.50,
         descricao: "ATUALIZAÇÃO DE ENDEREÇO, TELEFONE, CONSULTAS BÁSICAS DE ATENDIMENTOS E ORDEM DE SERVIÇO"
     },
     "CANCELAMENTO DE VISITA": {
