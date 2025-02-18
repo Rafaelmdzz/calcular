@@ -60,7 +60,7 @@ const subprocessValues = {
         descricao: "INFORMAÇÕES SOBRE DATA E PERIODO DE ORDEM DE SERVIÇO JÁ ABERTA"
     },
     "INFORMAÇÕES ONNET TV": {
-        valor: 1.60,
+        valor: 0.60,
         descricao: "INFORME DE USER E SENHA ONNET TV"
     },
     "INFORMAÇÕES SOBRE CONEXÃO 2.4GHZ E 5GHZ": {
@@ -111,7 +111,7 @@ const subprocessValues = {
         valor: 1.50,
         descricao: "AGENDAMENTO DE ORDEM DE SERVIÇO PARA CONFERENCIA DE SINAL APÓS CONFERIR O SINAL DE TODOS CLIENTES DO SPLITTER"
     },
-    "SUPOERTE TELEFONA": {
+    "SUPORTE TELEFONIA": {
         valor: 1.00,
         descricao: "CONFERENCIA E REPARO DE TELEFONIA FIXA"
     },
@@ -131,7 +131,7 @@ const subprocessValues = {
         valor: 1.20,
         descricao: "VERIFICAÇÃO E AGENDAMENTO DE TROCA DE ROTEADOR AO ALTERAR PLANO, DEFEITO OU SOLICITAÇÃO DE TERCEIROS"
     },
-    "TROCAR SENHA/USUARIO": {
+    "TROCA SENHA/USUARIO": {
         valor: 1.60,
         descricao: "TROCA/INFORME DE SENHA E NOME DA REDE WIFI"
     },
