@@ -6,4 +6,4 @@ uma calculadora que calcula a bonificação dos atendimentos feitos atravez de u
 
 Criação
 
-Um site onde usei pela primeira vez uma biblioteca que ler planilhas em .xlsx então gfrande parte da criação do suite eu usei de IAs para me auxiliar no funcionamento do codigo, tembem usei bastantre a internet para auxuiliar na construção do mecanismo de pesquisa pois ainda não dominei completamente a mecanica, a parte de armazenar os dados em um arquivo.js eu já tiunha feito antes em outros mini projetos
+Um site onde usei pela primeira vez uma biblioteca que ler planilhas em .xlsx então gfrande parte da criação eu usei de IAs para me auxiliar no funcionamento do codigo, tembem usei bastantre a internet para auxuiliar na construção do mecanismo de pesquisa pois ainda não dominei completamente a mecanica, a parte de armazenar os dados em um arquivo.js eu já tiunha feito antes em outros mini projetos então não tive muita dificuldade
