@@ -67,7 +67,7 @@ const subprocessValues = {
         valor: 2.60,
         descricao: "EXPLICAÇÕES SOBRE DIFERENÇAS ENTRE AMBAS REDES COMO VELOCIDADE ALCANCE E INCOMPATIBILIDADE ( rede 2.4g compativel com todos dispositivos limitada a 50/60 mb e com alcance maior/ rede 5G compativel a dispositivos AC com alcance menor referente a distancia e velocidade dependente do modelo do celular)"
     },
-    "LEBRAÇÃO DE PORTAS": {
+    "LIBERAÇÃO DE PORTAS": {
         valor: 3.50,
         descricao: "REDIRECIONAMENTO DE PORTAS PARA DVR, SERVIDORES ETC"
     },
